@@ -18,7 +18,10 @@
     <script>
         $.ajax({
             url: 'https://quran.kemenag.go.id/api/v1/surat/0/38',
-            method: 'GET',
+           type: "POST",
+            crossDomain: true,
+            data: JSON.stringify(somejson),
+            dataType: "json",
             success: (response) => {
                 console.log(response);
             }
